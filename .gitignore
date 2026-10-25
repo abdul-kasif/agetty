@@ -1,0 +1,37 @@
+# Python bytecode and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments (venv, conda, micromamba local envs)
+.venv/
+venv/
+.env/
+
+# Environment variables
+.env
+.env.*
+
+# Project specific runtime data (generated at runtime)
+data/
+workspaces/
+*.db
+*.sqlite
+*.sqlite3
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

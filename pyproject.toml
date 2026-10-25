@@ -1,0 +1,26 @@
+[project]
+name = "agetty"
+version = "0.1.0"
+description = "A local Agentic OS for autonomous AI agents."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "ollama>=0.3.0",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "sqlite-vec>=0.1.0",
+    "textual>=0.80.0",
+    "httpx>=0.27.0",
+    "pytest>=8.3.0",
+    "pyyaml>=6.0.0"
+]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,22 @@
+# Model tiers used by the Agentic OS scheduler.
+# The scheduler routes tasks to the appropriate model based on complexity.
+
+router:
+  name: "qwen2.5-coder:3b"
+  description: "Fast, lightweight model for task classification and routing."
+  vram_usage: "low"
+
+coder:
+  name: "qwen2.5-coder:7b"
+  description: "Balanced model for writing, editing, and executing code."
+  vram_usage: "medium"
+
+thinker:
+  name: "qwen2.5-coder:14b"
+  description: "Heavyweight model for complex planning, architecture, and deep reasoning."
+  vram_usage: "high"
+
+embedding:
+  name: "nomic-embed-text"
+  description: "Specialized model for generating vector embeddings for memory."
+  vram_usage: "minimal"

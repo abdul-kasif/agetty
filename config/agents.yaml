@@ -1,0 +1,25 @@
+# Definitions for the specialized agents in the Agentic OS.
+# The factory reads this file to instantiate agents with the correct models and tools.
+
+planner:
+  description: "Breaks down complex tasks into smaller, actionable subtasks."
+  model_tier: "thinker"
+  allowed_tools:
+    - "filesystem_read"
+  max_iterations: 5
+
+coder:
+  description: "Writes, edits, and executes code based on plans or direct instructions."
+  model_tier: "coder"
+  allowed_tools:
+    - "filesystem"
+    - "terminal"
+    - "code_editor"
+  max_iterations: 10
+
+reviewer:
+  description: "Reviews code for bugs, inefficiencies, and adherence to best practices."
+  model_tier: "coder"
+  allowed_tools:
+    - "filesystem_read"
+  max_iterations: 5
